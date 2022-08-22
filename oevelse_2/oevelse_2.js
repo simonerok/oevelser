@@ -1,15 +1,15 @@
-new Date().getHours();
-console.log("Godmorgen");
-console.log("Goddag");
-console.log("Godaften");
-console.log("Godnat");
+let time = new Date().getHours();
 
 
-if () {
-  console.log();
-  ();
-} else if () {
-  console.log();
+
+
+
+if (time>= 5 || time <= 10) {
+  console.log("Godmorgen");
+} else if (time>= 10  || time <=18 ) {
+  console.log("Goddag");
+} else if (time>=  18|| time<= 24){
+  console.log("Godaften");
 } else {
-  ();
+  console.log("Godnat");
 }
