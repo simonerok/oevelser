@@ -1,7 +1,27 @@
-article {
-  display: grid;
+main {
+  max-width: 1250;
+  margin: 0 auto;
 }
 
 section {
+  display: flex;
+}
+
+h1 {
+  border-bottom: 2px black solid;
+  text-align: center;
+}
+
+article {
   border: 2px black solid;
+  margin: 20px;
+}
+
+footer {
+  border-bottom: 2px black solid;
+  text-align: center;
+}
+
+img {
+  object-fit: fill;
 }
