@@ -1,19 +1,25 @@
 /* Definere input felt */
-knap.addEventListener("click", brugknap);
-var gæt = document.querySelector("#tal").value;
-var tal = math.floor(Math.random() * 10);
-var knap = document.querySelector("button");
+let forsoeg = 0;
+const ranNum = Math.floor(Math.random() * 11);
+console.log(ranNum);
+document.querySelector("button").addEventListener("click",tjekTal);
 
-function rigtigt() {
-  if (tal == gæt) {
-    alert("Du har vundet!");
-  }
+
+function tjekTal(){
+forsoeg++;
+const brugertal = document.querySelector("#tal").value;
+console.log(brugertal);
+if(ranNum > brugertal){
+    alert("Øv! "+ brugertal + " var for lavt. Prøv igen :)")
+    console.log(ranNum, brugertal);
+} else if (ranNum < brugertal) {
+    alert("Øv! "+ brugertal + " var for højt. Prøv igen :)")
+console.log(ranNum, brugertal);
+} else {
+    alert(brugertal + " er rigtigt!" + " Du brugte "+ forsoeg + " forsøg. Prøv igen :)")
+console.log("Du gættede rigtigt!");
+location.reload();
 }
-function forkert() {
-  if (tal !== gæt) {
-    alert("Du har tabt!");
-  }
 }
-function brugknap() {
-  console.log("Klik på knap");
-}
+
+
